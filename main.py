@@ -21,6 +21,12 @@ def log_uncaught_exceptions(ex_cls="", ex="", tb=""):
 # отлавливание ошибок
 sys.excepthook = log_uncaught_exceptions
 
+# Логин для базы данных mongo
+db_user_login = ""
+# Пароль от базы данных 
+db_user_passwd = ""
+# ip адрес базы данных mongo
+db_ip = ""
 
 def generate():
     """
@@ -42,8 +48,8 @@ def update_passwd(login):
     passwd = generate()
     logging.info("Пароль сгенерирован")
     # Заполнения учетных данных для базы данных
-    conn = pymongo.MongoClient('mongodb://%s:%s@%s/pvdrs' % (quote_plus("user db mongo"), quote_plus("passwd db mongo"),
-                                                             "ip db mongo"), port=27017)
+    conn = pymongo.MongoClient('mongodb://%s:%s@%s/pvdrs' % (quote_plus(db_user_login), quote_plus(db_user_passwd),
+                                                             db_ip), port=27017)
 
     # выбираем базу данных
     db = conn.pvdrs
