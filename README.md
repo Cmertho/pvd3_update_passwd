@@ -2,8 +2,11 @@
 Актульно для версий <=3.8.3
 
 Требуемые библиотеки для python:
-  *passgen - генерация пароля
-  *bcrypt - конвертация к хэш функцию 
-  *pymongo - для работы с бд mongodb
+
+  passgen - генерация пароля
+  
+  bcrypt - конвертация к хэш функцию 
+  
+  pymongo - для работы с бд mongodb
 
 pip install pymongo bcrypt passgen
