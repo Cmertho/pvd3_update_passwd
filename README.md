@@ -2,7 +2,7 @@
 
 Актуально для версий с 3.8.0 по 3.8.4
 
-Пример update_passwd_pvd3.py -login=twiss
+ * Пример update_passwd_pvd3.py -login=twiss
 
 Скрипт для смены логина для ПК ПВД3 update_login_pdv3.py
 
