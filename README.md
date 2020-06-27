@@ -6,17 +6,17 @@
 
 Скрипт для смены логина для ПК ПВД3 update_login_pdv3.py
 
-Пример update_login_pdv3.py -login=twiss -login_new=twiss_new
+ * Пример update_login_pdv3.py -login=twiss -login_new=twiss_new
 
 Требуемые библиотеки для python:
 
-  passgen - генерация пароля
+ * passgen - генерация пароля
   
-  bcrypt - конвертация в хэш функцию 
+ * bcrypt - конвертация в хэш функцию 
   
-  pymongo - для работы с бд mongodb
+ * pymongo - для работы с бд mongodb
   
-  click - воспроиведение файла с параметрами 
+ * click - воспроиведение файла с параметрами 
 
 
 pip install pymongo bcrypt passgen click
