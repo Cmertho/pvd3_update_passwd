@@ -4,7 +4,7 @@
 
  * Пример update_passwd_pvd3.py -login=twiss
 
-Скрипт для смены логина для ПК ПВД3 update_login_pdv3.py
+Скрипт для смены логина для ПК ПВД3 update_login_pvd3.py
 
  * Пример update_login_pdv3.py -login=twiss -login_new=twiss_new
 
