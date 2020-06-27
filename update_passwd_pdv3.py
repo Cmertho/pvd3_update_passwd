@@ -6,6 +6,8 @@ import passgen
 import bcrypt
 # pip install pymongo
 import pymongo
+# pip install click
+import click
 from urllib.parse import quote_plus
 
 
@@ -37,7 +39,8 @@ def generate():
     random_string = "".join(passgen.passgen(10))
     return bcrypt.hashpw(random_string.encode("utf-8"), bcrypt.gensalt(10, prefix=b"2a")).decode("utf-8"), random_string
 
-
+@click.command()
+@click.option("-login", prompt="Логин прользователя", help="Логин прользователя")
 def update_passwd(login):
     # включаем логирование
     logger = logging.getLogger("update_passwd_pvd3")
@@ -69,7 +72,4 @@ def update_passwd(login):
 
 
 if __name__ == "__main__":
-    # отправка в функцию данных из параметра -login и консоли
-    if "-login=" in sys.argv[1]:
-        update_passwd(sys.argv[1].replace("-login=", ""))
-    # update_passwd(login='')
+    update_passwd()
