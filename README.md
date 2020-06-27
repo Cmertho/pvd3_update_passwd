@@ -9,5 +9,7 @@
   bcrypt - конвертация в хэш функцию 
   
   pymongo - для работы с бд mongodb
+  
+  click - воспроиведение файла с параметрами 
 
-pip install pymongo bcrypt passgen
+pip install pymongo bcrypt passgen click
